@@ -2,7 +2,7 @@
 ## Description:
 This repository contains the original codes of the article titled "Enhancing-Part-based-Gait-Recognition-via-Ensemble-Learning-and-Feature-Fusion".
 
-![Project Image](https://github.com/busrakckugurlu/Enhancing-Part-based-Gait-Recognition-via-Ensemble-Learning-and-Feature-Fusion/tree/main/images/part_ensemble_learning.jpg)
+![Project Image](https://github.com/busrakckugurlu/Enhancing-Part-based-Gait-Recognition-via-Ensemble-Learning-and-Feature-Fusion/blob/main/images/Fig.4.jpg)
 ## License:
 If you find this repository useful, please cite this paper:
 
