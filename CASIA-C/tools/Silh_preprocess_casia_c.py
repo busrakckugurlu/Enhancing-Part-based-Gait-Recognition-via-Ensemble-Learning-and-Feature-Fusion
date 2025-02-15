@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Dec 16 21:02:53 2022
-
+this code available in "Chao H, He Y, Zhang J, Feng J (2019) GaitSet: regarding gait as a set for cross-view gait recognition. In: AAAI Conference on Artificial Intelligence (pp. 8126–8133) "
 @author: BUSRA
 """
 
