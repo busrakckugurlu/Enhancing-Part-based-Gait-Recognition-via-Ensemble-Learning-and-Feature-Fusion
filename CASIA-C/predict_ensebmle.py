@@ -82,7 +82,7 @@ class LayerNorm2d(torch.nn.LayerNorm):
         return x
 
 # %%
-######burasııııı
+###### MODEL
 class Net(torch.nn.Module):
     def __init__(self,output_dim):
         super(Net, self).__init__()
