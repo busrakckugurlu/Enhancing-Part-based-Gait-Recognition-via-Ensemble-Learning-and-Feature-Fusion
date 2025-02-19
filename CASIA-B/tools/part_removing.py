@@ -16,12 +16,10 @@ def remove_object_by_difference(image1, image2, threshold_value=100, condition='
         
         _, thresh = cv2.threshold(difference, threshold_value, 255, cv2.THRESH_BINARY)
         
-        # Çantayı çıkarmak için maskeyi orijinal çantalı görüntüye uygulayacağız
         modified_image = np.copy(image1)
         
-        # Her parça için fark bölgesini inceleyin
         for i, (start, end) in enumerate(section_ranges):
-            # Belirtilen başlangıç ve bitiş satırlarına göre fark bölümünü alın
+
             section_diff = thresh[start:end, :]
             white_pixel_count = np.sum(section_diff == 255)
     
@@ -34,21 +32,14 @@ def remove_object_by_difference(image1, image2, threshold_value=100, condition='
         section_thresholds = [1500, -5, -5, 500, 900]
         
         difference = cv2.absdiff(image1, image2)
-        
-        # Fark görüntüsünü threshold ile belirginleştir
         _, thresh = cv2.threshold(difference, threshold_value, 255, cv2.THRESH_BINARY)
-        
-        # Çantayı çıkarmak için maskeyi orijinal çantalı görüntüye uygulayacağız
         modified_image = np.copy(image1)
         
-        # Her parça için fark bölgesini inceleyin
         for i, (start, end) in enumerate(section_ranges):
-            # Belirtilen başlangıç ve bitiş satırlarına göre fark bölümünü alın
             section_diff = thresh[start:end, :]
             white_pixel_count = np.sum(section_diff == 255)
     
             if white_pixel_count > section_thresholds[i]:
-    
                 modified_image[start:end, :] = 0
     
     return modified_image, thresh
